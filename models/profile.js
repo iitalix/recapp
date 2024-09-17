@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
+// Schema takes 2 options objects as arguments. The first being
+// the KVPs we need for the profile, and an optional additional options object
 const ProfileSchema = Schema(
   {
     firstName: {
@@ -42,4 +44,6 @@ const ProfileSchema = Schema(
   }
 );
 
+// model the data using mongoose. we name it "Profile", and
+// we tell mongoose how to do it by passing in our schema
 export const Profile = mongoose.model('Profile', ProfileSchema);

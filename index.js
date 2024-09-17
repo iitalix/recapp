@@ -7,6 +7,7 @@ app.use(express.json());
 
 app.get('/test', (_, res) => res.send('This works.'));
 
+// we want to use express router
 app.use('/api/profiles', profiles);
 
 const port = 8080;
